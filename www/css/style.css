@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+ion-content{
+    background-color: ;
+}
+ion-content{
+    background-color: dodgerblue;
+}
+
+h3#title {
+    padding-top: 50px;
+    text-align: center;
+}
+h3#title2 {
+    text-align: center;
+}
+
+p#account {
+    text-align: center;
+    color: red;
+}

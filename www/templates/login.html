@@ -1,0 +1,15 @@
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+  		<h3 id="title">Document Tracking System</h3>
+		    <div class="list list-inset">
+		        <label class="item item-input">
+		            <input type="text" placeholder="Username" ng-model="data.username">
+		        </label>
+		        <label class="item item-input">
+		            <input type="password" placeholder="Password" ng-model="data.password">
+		        </label>
+		    </div>
+    		<button class="button button-block button-calm" ng-click="login()">Login</button>
+			<p ng-click="register()" id="account">Or Create an account<p>
+  </ion-content>
+</ion-view>
