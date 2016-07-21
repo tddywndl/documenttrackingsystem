@@ -31,23 +31,41 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  .state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/menu.html',
+    controller: 'AppCtrl'
+  })
+
   .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
+      controller: 'AppCtrl'
   })
 
   .state('register', {
       url: '/register',
       templateUrl: 'templates/register.html',
-      controller: 'LoginCtrl'
+      controller: 'AppCtrl'
   })
 
-  .state('welcome', {
-      url: '/welcome',
-      templateUrl: 'templates/welcome.html',
-      controller: 'LoginCtrl'
-  })
+  .state('app.home', {
+      url: '/home',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/home.html'
+        }
+      }
+    })
+  .state('app.search', {
+      url: '/search',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/search.html'
+        }
+      }
+    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');

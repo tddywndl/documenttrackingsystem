@@ -1,12 +1,12 @@
 angular.module('starter.controllers', [])
 
-//This is my user define login
-.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    //This is my user define login
+.controller('AppCtrl', function($scope, LoginService, $ionicPopup, $location) {
     $scope.data = {};
- 
-    $scope.login = function() {
+     
+     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('welcome');
+            $location.path('/app/home')
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
@@ -14,13 +14,17 @@ angular.module('starter.controllers', [])
             });
         });
     }
+
+
     $scope.register = function() {
-        $state.go('register');
+        $location.path('/login');
     }
+
     $scope.logout = function() {
-        $state.go('login');
+        $location.path('/login');
     }
+
     $scope.cancel = function() {
-        $state.go('login');
+        $location.path('/login');
     }
 })
