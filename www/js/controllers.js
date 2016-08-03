@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, LoginService, $ionicPopup, $location) {
     $scope.data = {};
      
-     $scope.login = function() {
+    $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $location.path('/app/home')
         }).error(function(data) {
@@ -15,16 +15,18 @@ angular.module('starter.controllers', [])
         });
     }
 
-
     $scope.register = function() {
         $location.path('/login');
     }
 
-    $scope.logout = function() {
+    $scope.cancel = function() {
         $location.path('/login');
     }
+})
 
-    $scope.cancel = function() {
+.controller('DashCtrl', function($scope, $location) {
+
+    $scope.logout = function() {
         $location.path('/login');
     }
 })

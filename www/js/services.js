@@ -23,3 +23,4 @@ angular.module('starter.services', [])
         }
     }
 })
+
