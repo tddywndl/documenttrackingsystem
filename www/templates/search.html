@@ -8,19 +8,25 @@
 			<input type="text" placeholder="Track a document">
 		</label>
 	</div>
-	<div class="list">
-		<div class="item item-divider">Tracking Number</div>
-		<div class="item item-divider">000000000000000</div>
-		<div class="item item-divider">Origin: Procurement Unit</div>
-	</div>
-	
-	<ul class="list">
-		<li class="item">Date</li>
-		<li class="item">January 1, 2000, 06:00:00 AM</li>
+
+	<ul class="list" ng-repeat="x in tracking">
+		<li class="item">Tracking Number</li>
+		<li class="item">{{x.trackingNo}}</li>
 		<li class="item">Document Type</li>
-		<li class="item">Purchase Request</li>
-		<li class="item">Status of Document/Location</li>
-		<li class="item">For Signature/Accounting</li>
+		<li class="item">{{x.docType}}</li>
+		<li class="item">Status of Document</li>
+		<li class="item">{{x.status}}</li>
+	</ul>
+
+	<ul class="list" ng-repeat="x in tracking">
+		<li class="item">Date</li>
+		<li class="item">{{x.date}}</li>
+		<li class="item">Document Type</li>
+		<li class="item">{{x.docType}}</li>
+		<li class="item">Status of Document</li>
+		<li class="item">{{x.status}}</li>
+		<li class="item">Location</li>
+		<li class="item">{{x.location}}</li>
 	</ul>
 	
   </ion-content>

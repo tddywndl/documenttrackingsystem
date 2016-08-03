@@ -16,5 +16,9 @@ h3#title2 {
 
 p#account {
     text-align: center;
-    color: red;
+    color: white;
+}
+
+h3#title {
+	color: white;
 }

@@ -1,7 +1,6 @@
-angular.module('starter.controllers', [])
+angular.module('controllers', [])
 
-    //This is my user define login
-.controller('AppCtrl', function($scope, LoginService, $ionicPopup, $location) {
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $location) {
     $scope.data = {};
      
     $scope.login = function() {
@@ -29,4 +28,12 @@ angular.module('starter.controllers', [])
     $scope.logout = function() {
         $location.path('/login');
     }
+})
+
+.controller('TrackCtrl', function($scope, TrackingService) {
+
+    $scope.tracking = TrackingService.all();
+    $scope.remove = function(chat) {
+        TrackingService.remove(tracking);
+    };
 })

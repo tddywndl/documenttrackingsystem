@@ -1,11 +1,4 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'controllers', 'services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,25 +16,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  
+.config(function($stateProvider, $urlRouterProvider) {  
   $stateProvider
 
   .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'AppCtrl'
+      controller: 'LoginCtrl'
   })
 
   .state('register', {
       url: '/register',
       templateUrl: 'templates/register.html',
-      controller: 'AppCtrl'
+      controller: 'LoginCtrl'
   })
 
   .state('app', {
@@ -63,7 +50,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/search',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/search.html',
+          controller: 'TrackCtrl'
         }
       }
     })
