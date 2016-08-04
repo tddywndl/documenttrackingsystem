@@ -10,23 +10,12 @@
 	</div>
 
 	<ul class="list" ng-repeat="x in tracking">
-		<li class="item">Tracking Number</li>
-		<li class="item">{{x.trackingNo}}</li>
-		<li class="item">Document Type</li>
-		<li class="item">{{x.docType}}</li>
-		<li class="item">Status of Document</li>
-		<li class="item">{{x.status}}</li>
-	</ul>
-
-	<ul class="list" ng-repeat="x in tracking">
-		<li class="item">Date</li>
-		<li class="item">{{x.date}}</li>
-		<li class="item">Document Type</li>
-		<li class="item">{{x.docType}}</li>
-		<li class="item">Status of Document</li>
-		<li class="item">{{x.status}}</li>
-		<li class="item">Location</li>
-		<li class="item">{{x.location}}</li>
+		<li class="item">Tracking Number: {{x.trackingNo}}</li>
+		<li class="item">Origin: {{x.origin}}</li>
+		<li class="item">Document Type: {{x.docType}}</li>
+		<li class="item">Date Forwarded: {{x.date}}</li>
+		<li class="item">Status of Document: {{x.status}}</li>
+		<li class="item">Location: {{x.location}}</li>
 	</ul>
 	
   </ion-content>
