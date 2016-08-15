@@ -1,0 +1,22 @@
+<ion-view view-title="Search">
+  <ion-content class="padding">
+  	<h3 id="title2">Track Document</h3>
+	<div class="list list-inset">
+
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Track a document">
+		</label>
+	</div>
+
+	<ul class="list" ng-repeat="x in tracking">
+		<li class="item">Tracking Number: {{x.trackingNo}}</li>
+		<li class="item">Origin: {{x.origin}}</li>
+		<li class="item">Document Type: {{x.docType}}</li>
+		<li class="item">Date Forwarded: {{x.date}}</li>
+		<li class="item">Status of Document: {{x.status}}</li>
+		<li class="item">Location: {{x.location}}</li>
+	</ul>
+	
+  </ion-content>
+</ion-view>

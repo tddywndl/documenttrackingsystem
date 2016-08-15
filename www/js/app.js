@@ -38,14 +38,6 @@ angular.module('starter', ['ionic', 'controllers', 'services'])
     controller: 'DashCtrl'
   })
 
-  .state('app.home', {
-      url: '/home',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/home.html'
-        }
-      }
-    })
   .state('app.search', {
       url: '/search',
       views: {

@@ -5,7 +5,7 @@ angular.module('controllers', [])
      
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $location.path('/app/home')
+            $location.path('/app/search')
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
